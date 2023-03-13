@@ -9,8 +9,8 @@ include {
 }
 
 inputs = {
-  name = "my-vpc-prod"
-  cidr = "10.0.0.0/16"
+  name            = "my-vpc-prod"
+  cidr            = "10.0.0.0/16"
   azs             = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
   private_subnets = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
   public_subnets  = ["10.0.201.0/24", "10.0.202.0/24", "10.0.203.0/24"]
