@@ -5,12 +5,12 @@ on:
     branches:
       - develop
     paths:
-      - 'dev/**'
+      - 'live/dev/**'
   pull_request:
     branches:
       - develop
     paths:
-      - 'dev/**'
+      - 'live/dev/**'
 
 jobs:
   terragrunt:
