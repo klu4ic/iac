@@ -127,4 +127,8 @@ jobs:
         if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
         run: terragrunt run-all apply --terragrunt-non-interactive
 
+      - name: Terragrunt Destroy
+        if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+        run: terragrunt run-all destroy --terragrunt-non-interactive
+
  
