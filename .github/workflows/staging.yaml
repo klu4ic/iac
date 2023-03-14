@@ -1,4 +1,4 @@
-name: "Terragrunt CI/CD Pipeline"
+name: "Terragrunt CI/CD Pipeline STAGING"
 
 on:
   push:
@@ -21,6 +21,7 @@ jobs:
   terragrunt:
     name: Terragrunt
     runs-on: ubuntu-latest
+    environment: Staging 
     defaults:
       run:
         working-directory: ${{ env.WORKING_DIRECTORY }}
@@ -35,7 +36,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-north-1
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
