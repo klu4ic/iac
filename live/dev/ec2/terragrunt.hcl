@@ -10,7 +10,7 @@ include {
 
 dependency "vpc" {
   config_path                             = "../vpc"
-  mock_outputs_allowed_terraform_commands = ["init", "validate", "plan"] # Configure mock outputs for the "init", "validate", "plan" commands that are returned when there are no outputs available (e.g the module hasn't been applied yet.)
+  mock_outputs_allowed_terraform_commands = ["init", "validate", "plan", "terragrunt-info", "show"] # Configure mock outputs for the "init", "validate", "plan" commands that are returned when there are no outputs available (e.g the module hasn't been applied yet.)
   mock_outputs = {
     public_subnets = ["public-subnet-fake-id"]
   }
@@ -18,7 +18,7 @@ dependency "vpc" {
 
 dependency "security-group" {
   config_path                             = "../security-group"
-  mock_outputs_allowed_terraform_commands = ["init", "validate", "plan"] # Configure mock outputs for the "init", "validate", "plan" commands that are returned when there are no outputs available (e.g the module hasn't been applied yet.)
+  mock_outputs_allowed_terraform_commands = ["init", "validate", "plan", "terragrunt-info", "show"] # Configure mock outputs for the "init", "validate", "plan" commands that are returned when there are no outputs available (e.g the module hasn't been applied yet.)
   mock_outputs = {
     security_group_id = "security-group-fake-id"
   }
