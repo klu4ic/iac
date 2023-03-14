@@ -12,6 +12,11 @@ on:
     paths:
       - 'live/dev/**'
 
+# Set the permissions for GITHUB_TOKEN. The following sets the permissions for the GITHUB_TOKEN to be able to add comments to the pull requests.
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   terragrunt:
     name: Terragrunt
